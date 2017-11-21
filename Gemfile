@@ -40,7 +40,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'selenium-webdriver'
   gem 'faker'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
 end
 
 group :test do
