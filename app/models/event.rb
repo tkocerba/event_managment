@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   has_many :users, through: :enrollments
 
   validates :title, presence: true, length: {minimum: 2}, uniqueness: {scope: :category}
-  }
+  
   validates :starts_at, presence: true
   validates :ends_at, presence: true
 
