@@ -37,12 +37,15 @@ gem 'email_validator'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'rspec-rails', '~> 3.6'
   gem 'selenium-webdriver'
+  gem 'faker'
+  gem 'factory_girl_rails'
+end
 
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara', '~> 2.13'
 end
 
 group :development do
@@ -51,7 +54,7 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'faker'
+ 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
