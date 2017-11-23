@@ -5,7 +5,7 @@ class User < ApplicationRecord
     validates :name, presence: true, length: { minimum: 2 }
     validates :email, presence: true,  uniqueness: true, email: true
 
-    before_save :normalize_name, if:  "user.name_changed?"
+    before_save :normalize_name, if:  Proc.new { |user| user.name_changed? }
 
     private
 
