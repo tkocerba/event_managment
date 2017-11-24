@@ -1,1 +1,9 @@
 @import "bootstrap";
+
+.has-danger {
+  color: red;
+
+  input, textarea {
+    border-color: red;
+  }
+}

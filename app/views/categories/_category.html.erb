@@ -1,0 +1,10 @@
+<div class="card mb-5">
+  <div class="card-block">
+    <h4 class="card-title mt-2 mb-2 ml-2"><%= link_to category.title, category_path(category) %></h4>
+    <h6 class="category-subtitle mb-2 ml-2 text-muted"><%= category.created_at%></h6>
+    <p class="card-text ml-2 mb-2"><%= category.description %></p>
+
+    <%= link_to 'Edit', edit_category_path(category), class: 'card-link btn btn-warning ml-2 mb-2 btn-sm' %>
+    <%= link_to 'Delete', category_path(category), class: 'card-link btn btn-danger ml-2 mb-2 btn-sm', data: {method: :delete} %>
+  </div>
+</div>
