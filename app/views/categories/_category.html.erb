@@ -5,6 +5,6 @@
     <p class="card-text ml-2 mb-2"><%= category.description %></p>
 
     <%= link_to 'Edit', edit_category_path(category), class: 'card-link btn btn-warning ml-2 mb-2 btn-sm' %>
-    <%= link_to 'Delete', category_path(category), class: 'card-link btn btn-danger ml-2 mb-2 btn-sm', data: {method: :delete} %>
+    <%= link_to 'Delete', category_path(category), class: 'card-link btn btn-danger ml-2 mb-2 btn-sm', data: {method: :delete, confirm: 'Are you sure?'} %>
   </div>
 </div>
