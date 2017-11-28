@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category!, only: [:edit, :update, :show, :destroy]
   def index
-    @categories = Category.order(created_at: :desc)
+    @categories = Category.order(id: :asc)
   end
 
   def new
@@ -18,9 +18,9 @@ class CategoriesController < ApplicationController
       render :new
     end
   end
-  
-  def def show
-    
+   
+  def show
+    @events = @category.events.order(created_at: :desc)
   end
 
   def update

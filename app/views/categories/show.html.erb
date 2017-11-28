@@ -1,6 +1,9 @@
 <%= title @category.title  %>
-<% at_page @category.title %>
+<% at_page %>
 
 <p class="lead">
   <%= @category.description %>
 </p>
+
+<h2>Events</h2>
+<%= render @events %>
